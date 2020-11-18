@@ -49,11 +49,11 @@ const App = () => {
 
   const categorias = (foto, lista,assessoria,espaco,buffet) => {
     setChartDataPie({
-      labels: ['Criado', 'Confirmado', 'Visitado', 'Cancelado' ],
+      labels: ['Foto e Filmagem', 'Lista de Presentes', 'Assessoria de casamento', 'Espaço, Buffet' ],
       datasets: [
         {
           label: '',
-          data: [foto, lista,assessoria,espaco,buffet],
+          data: [foto, lista, assessoria, espaco, buffet],
           backgroundColor: [
              'rgb(104, 191, 183)',
              'rgb(255, 0, 0)',
@@ -133,19 +133,22 @@ const App = () => {
           <div>
             <img src={`${process.env.PUBLIC_URL}/lejour_logo.png`} width="29" height="45" alt="" loading="lazy" />
           </div>
-          <span className="htext">DASHBOARD</span>
+          <div className="htext">
+          <span>Dashboard</span>
+          <span>Gerenciar</span>
           <span className="signout">
               <span className="signout-icon">
                 <svg viewBox="0 0 24 24" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"> 
                   <path d="M22 19.2c-.9-3.7-3.7-6.5-7.2-7.5 1.6-1 2.6-2.7 2.6-4.7 0-3-2.5-5.5-5.5-5.5S6.5 4.1 6.5 7.1c0 2 1 3.7 2.6 4.7-3.5 1-6.3 3.8-7.2 7.5-.2.7 0 1.5.5 2.1.5.6 1.2 1 2 1h15.1c.8 0 1.5-.4 2-1 .5-.7.7-1.4.5-2.2zM7.7 7.1c0-2.4 1.9-4.3 4.3-4.3s4.3 1.9 4.3 4.3-1.9 4.3-4.3 4.3-4.3-1.9-4.3-4.3zm12.9 13.5c-.3.3-.7.5-1.1.5h-15c-.4 0-.8-.2-1.1-.5-.2-.3-.3-.7-.2-1.1 1-4.1 4.7-6.9 8.9-6.9s7.9 2.9 8.9 6.9c0 .4-.1.8-.4 1.1z"></path>
                 </svg> 
               </span>
-             <span className="signout-text">sair</span>
+             <span className="signout-text">Sair</span>
           </span>
+          </div>
         </div>
       </div>
       <div className="content">
-        <h1>Como o Lejour funciona?</h1>
+        <h1>Dashboard</h1>
         <div className="panel">
           <div className="selector">
             <div className="htext sz" onClick={event => handleClickCasais(event)}>Casais</div>
@@ -180,8 +183,6 @@ const App = () => {
           <div>
             <img src={`${process.env.PUBLIC_URL}/lejour_logo_w.png`} width="29" height="45" alt="" loading="lazy" />
           </div>
-          <span>DASHBOARD</span>
-          <span>SAIR</span>
         </div>
       </div>
     </div>
